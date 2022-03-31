@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Чытач.бай{% endblock %}
+
+{% block body %}
+    <header>
+        <h1 class="header-text">Чытач.бай</h1>
+        <nav class="head-nav">
+            <a href="#" class="nav__link">Главная</a>
+            <a href="#" class="nav__link">Мероприятия</a>
+            <a href="#" class="nav__link">О нас</a>
+            <a href="#" class="nav__link">Связь с нами</a>
+            <a href="#" class="nav__link">Как нас найти?</a>
+        </nav>
+    </header>
+    <main>
+        <section class="overview">
+            <h1>Лучшая современная библиотека.</h1>
+            <h2>Интересные книги в уютном простанстве</h2>
+            <br>
+            <br>
+            <div class="slider-wrapper">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 9" width="40" height="9"><style></style><path  d="m39 5.3h-28.9c1.4 1.5 2.1 2.4 2.2 3.7-3.2-2.2-7.3-3.4-12.3-4.5 5-1.1 8.9-2.3 12.3-4.5-0.3 1.4-0.8 2.3-2.2 3.8h28.9z"/></svg>
+                <img src="{{ asset('images/book.png') }}" alt="">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 9" width="39" height="9"><style></style><path  d="m0 3.7h28.9c-1.4-1.5-2.1-2.4-2.2-3.7 3.2 2.2 7.3 3.4 12.3 4.5-5 1.1-8.9 2.3-12.3 4.5 0.2-1.4 0.8-2.3 2.2-3.8h-28.9z"/></svg>
+            </div>
+            <p>Любите читать? Наша библиотека отличное место для времяпрепровождения</p>
+            <br>
+            <b>Наши преимущества:</b>
+            <br>
+            <br>
+            <ul>
+                <li>Стильные читальные залы, в которых ХОЧЕТСЯ читать</li>
+                <br>
+                <li>Удобное расположение в центре города</li>
+                <br>
+                <li>Большой выбор классической и современной литературы</li>
+                <br>
+            </ul>
+        </section>
+        <section class="events">
+            <div class="events-title">
+                <h1>Мероприятия</h1>
+                <div class="undercover"></div>
+            </div>
+            <br>
+            <div class="events-container">
+                <div class="event-card">
+                    <h3 class="event-card__title">Лекция по истории искусства</h3>
+                    <br>
+                    <p>вт. 2 апреля | Минск</p>
+                </div>
+                <div class="event-card">
+                    <h3 class="event-card__title">Читательский клуб</h3>
+                    <br>
+                    <p>вт. 15 апреля | Минск</p>
+                </div>
+                <div class="event-card">
+                    <h3 class="event-card__title">Встреча с автором</h3>
+                    <br>
+                    <p>вт. 2 июля | Минск</p>
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="about-img-wrapper">
+                <img src="{{ asset('images/timetable.png') }}" alt="">
+            </div>
+            <h1 class="about-us__title">О нас</h1>
+            <br>
+            <h2 class="about-us__subtitle">Когда мы работаем?</h2>
+            <br>
+            <ul>
+                <li>Пн - Чт: 10:00 - 20:00</li>
+                <br>
+                <li>Пт - Сб: 10:00 - 18:00</li>
+                <br>
+                <li>Вск: 12:00 - 17:00</li>
+                <br>
+            </ul>
+        </section>
+        <section class="contact-us">
+            <h1 class="contact-us__title">Связь с нами</h1>
+            <br>
+            <p class="contact-us__info">Возникли вопросы? С радостью ответим, напишите нам!</p>
+            <br>
+            <div class="contacts-container">
+                <div class="contact-card">
+                    <a><img src="{{ asset('images/telegram.png') }}" alt="" class="contact__img"></a>
+                    <p class="contact-text">@czytaczby</p>
+                </div>
+                <div class="contact-card">
+                    <a><img src="{{ asset('images/gmail.png') }}" alt="" class="contact__img"></a>
+                    <p class="contact-text">czytacz.by@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <a><img src="{{ asset('images/instagram.png') }}" alt="" class="contact__img"></a>
+                    <p class="contact-text">@czytaczby</p>
+                </div>
+            </div>
+            <br>
+        </section>
+        <section class="find-us">
+            <h1 class="find-us__title">Где нас найти?</h1>
+            <br>
+            <p class="find-us__subtitle">Мы находимся по адресу - г. Минск, проспект Независимости 7А</p>
+            <br>
+        </section>
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1920.6597338527245!2d27.548755730652594!3d53.8963756994617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfe805b74b5b%3A0xd35ad36b31893992!2z0L_RgC4g0J3QtdC30LDQstC40YHQuNC80L7RgdGC0LggNywg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1648754009677!5m2!1sru!2sby" width="1080" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    <footer>
+        <div class="left-foot-part">
+            <p>© ООО «ektrshha & zabaleraa»</p>
+            <p>Все права защищены.</p>
+        </div>
+        <div class="right-foot-part">
+            <p>Email:czytacz.by@gmail.com</p>
+            <p>Телефон: +375445678912</p>
+        </div>
+    </footer>
+{% endblock %}
