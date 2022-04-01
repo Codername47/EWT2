@@ -47,12 +47,32 @@ header {
 }
 
 .nav__link {
+    position: relative;
+    cursor: pointer;
     font-size: 18px;
     color: black;
     font-family: HelveticaNeueCyr;
-    text-wrap: avoid;
     text-align: center;
     text-decoration: none;
+    line-height: 1;
+}
+
+.nav__link::after{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+
+.nav__link:focus::after,
+.nav__link:hover::after {
+    width: 100%;
+    border: 1px solid #f04b4b;
+    border-radius: 2px;
 }
 
 main {
@@ -69,7 +89,7 @@ main {
 }
 
 .overview > h1 {
-    width: 600px;
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
@@ -88,9 +108,13 @@ li {
     color: #f04b4b;
 }
 
+.swrap2 {
+    display: none;
+}
+
 .slider-wrapper {
     float: right;
-    padding: 25px 0 0 0px;
+    padding: 25px 60px 0 50px;
     height: 350px;
 }
 
@@ -101,11 +125,46 @@ li {
 }
 
 .slider-wrapper img {
-    width: 290px;
+    max-width: 290px;
     clear: both;
     position: relative;
 }
 
+.slider {
+    max-width: 290px;
+    overflow: visible;
+}
+
+.slider__control {
+    background: unset;
+}
+.slider__control_prev::before {
+    background-image: url("../images/prev.svg");
+    width: 50px;
+}
+
+.slider__control_next::before {
+    background-image: url("../images/next.svg");
+    width: 50px;
+}
+
+.slider__item {
+    background-color: #d8d8d8;
+}
+
+.slider {
+    -webkit-box-shadow: -3px 11px 13px 10px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -3px 11px 13px 10px rgba(34, 60, 80, 0.2);
+    box-shadow: -3px 11px 13px 10px rgba(34, 60, 80, 0.2);
+}
+
+.slider__control_next {
+    right: -50px;
+}
+
+.slider__control_prev {
+    left: -50px;
+}
 .events {
     background-color: white;
     padding: 65px 20px;
@@ -203,6 +262,7 @@ li {
     gap: 10px;
     flex-direction: column;
     align-items: center;
+    width: 30%
 }
 
 .contact__img {
@@ -221,10 +281,13 @@ li {
 
 .map{
     background-color: white;
+    max-width: 1080px;
+    display: flex;
+    overflow: hidden;
 }
 
 footer {
-    width: 1080px;
+    max-width: 1080px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -248,3 +311,140 @@ footer p {
     text-align: right;
 }
 
+@media screen and (max-width: 840px)
+{
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    li {
+        font-size: 20px;
+    }
+    b {
+        font-size: 20px;
+    }
+    .overview > p {
+        font-size: 20px;
+    }
+    .nav__link {
+        font-size: 14px;
+    }
+
+
+    .event-card {
+        height: auto;
+        min-height: unset;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    body {
+        font-size: 16px;
+    }
+    .slider-wrapper {
+        height: 400px;
+    }
+    .nav__link {
+        font-size: 12px;
+    }
+    .about-img-wrapper img {
+        width: 350px;
+    }
+    .about-img-wrapper {
+        height: 310px;
+    }
+    .events-container {
+        margin: 50px 0 70px 0;
+    }
+    .overview > p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .contact__img {
+        height: 64px;
+    }
+    .head-nav {
+        width: unset;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .header-text {
+        margin-right: auto;
+        padding-bottom: 50px;
+    }
+    .nav__link {
+        width: 100%;
+        font-size: 16px;
+    }
+    header {
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+    .about-img-wrapper img{
+        width: 210px;
+    }
+    .swrap2 {
+        display: unset;
+        float: unset;
+    }
+    .swrap1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .overview {
+        padding: 0 50px;
+    }
+    .about-img-wrapper {
+        float: unset;
+        width: 100%;
+        height: auto;
+    }
+    .about-img-wrapper img{
+        width: 100%;
+    }
+    .slider-wrapper img{
+        width: 100%;
+    }
+    .about-us__title {
+        margin-top: 0;
+    }
+    .events-container {
+        margin-top: 30px;
+        flex-direction: column;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    .event-card {
+        width: 100%;
+    }
+    .contacts-container {
+        flex-wrap: wrap;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    .contact-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    body {
+        min-width: 320px;
+    }
+}

@@ -6,11 +6,11 @@
     <header>
         <h1 class="header-text">Чытач.бай</h1>
         <nav class="head-nav">
-            <a href="#" class="nav__link">Главная</a>
-            <a href="#" class="nav__link">Мероприятия</a>
-            <a href="#" class="nav__link">О нас</a>
-            <a href="#" class="nav__link">Связь с нами</a>
-            <a href="#" class="nav__link">Как нас найти?</a>
+            <a class="nav__link">Главная</a>
+            <a class="nav__link">Мероприятия</a>
+            <a class="nav__link">О нас</a>
+            <a class="nav__link">Связь с нами</a>
+            <a class="nav__link">Как нас найти?</a>
         </nav>
     </header>
     <main>
@@ -19,10 +19,21 @@
             <h2>Интересные книги в уютном простанстве</h2>
             <br>
             <br>
-            <div class="slider-wrapper">
-                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 9" width="40" height="9"><style></style><path  d="m39 5.3h-28.9c1.4 1.5 2.1 2.4 2.2 3.7-3.2-2.2-7.3-3.4-12.3-4.5 5-1.1 8.9-2.3 12.3-4.5-0.3 1.4-0.8 2.3-2.2 3.8h28.9z"/></svg>
-                <img src="{{ asset('images/book.png') }}" alt="">
-                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 9" width="39" height="9"><style></style><path  d="m0 3.7h28.9c-1.4-1.5-2.1-2.4-2.2-3.7 3.2 2.2 7.3 3.4 12.3 4.5-5 1.1-8.9 2.3-12.3 4.5 0.2-1.4 0.8-2.3 2.2-3.8h-28.9z"/></svg>
+            <div class="slider-wrapper swrap1">
+                <div class="slider sl1">
+                    <div class="slider__wrapper">
+                        <div class="slider__items">
+                            <div class="slider__item">
+                                <img src="{{ asset('images/book.png') }}" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="{{ asset('images/mem.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+                    <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+                </div>
             </div>
             <p>Любите читать? Наша библиотека отличное место для времяпрепровождения</p>
             <br>
@@ -37,6 +48,22 @@
                 <li>Большой выбор классической и современной литературы</li>
                 <br>
             </ul>
+            <div class="slider-wrapper swrap2">
+                <div class="slider sl2">
+                    <div class="slider__wrapper">
+                        <div class="slider__items">
+                            <div class="slider__item">
+                                <img src="{{ asset('images/book.png') }}" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="{{ asset('images/mem.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+                    <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+                </div>
+            </div>
         </section>
         <section class="events">
             <div class="events-title">
